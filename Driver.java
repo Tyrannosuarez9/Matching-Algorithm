@@ -1,17 +1,34 @@
 
+
 public class Driver extends Post{
-	String destination;
+
+
 	int driverId;
 	int seats;
 	String time;
 	String vehicle;
+	int tripId;
+
+	public int getTripId() {
+		return tripId;
+	}
+	public void setTripId(int tripId) {
+		this.tripId = tripId;
+	}
+	public Driver(){}
+	//dest,date,1234,1,time,vehicle
+	public Driver(String dest, String date, int driverId, int seats, String time, String vehicle){
+	    super.date = date;
+
+		super.destination = dest;
+		this.driverId = driverId;
+		this.seats = seats;
+		this.time = time;
+		this.vehicle = vehicle;
+	}
+
+
 	
-	public String getDestination() {
-		return destination;
-	}
-	public void setDestination(String destination) {
-		this.destination = destination;
-	}
 	public int getDriverId() {
 		return driverId;
 	}

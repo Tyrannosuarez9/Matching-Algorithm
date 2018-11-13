@@ -1,7 +1,7 @@
 
 public class thread extends Thread {
 	int postID = 0;
-
+	Matching holder = new Matching();
 	public thread(int id) {
 		postID = id;
 	}
@@ -9,10 +9,10 @@ public class thread extends Thread {
 	testing tester = new testing();
 
 	public void run() {
-		for (int x = 0; x <= 1; x++) {
-			if (tester.testing(x)) {
+		for (;;) {
+			if (holder.Match(postID)) {
 				System.out.println(postID);
-				Thread.currentThread().interrupt();
+				return;
 			}
 			else {
 				System.out.println("sleeping on " + postID);

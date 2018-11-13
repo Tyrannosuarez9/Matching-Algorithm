@@ -35,6 +35,8 @@ public class Matching {
 		
 		
 		String query = "select * from driverpost where DestinationID='" + destination+"'";
+		if(destination==null)
+			return returninglist;
 		System.out.println(query);
 		try {
 			Statement stmt = con.createStatement();
@@ -62,6 +64,8 @@ public class Matching {
 		//java.sql.Connection con = forcreation.MakeConnection();
 		Rider rider= useguy.getriderDestination(postid) ;
 		ArrayList<Driver> driver = useguy.getdrivers(rider.destination);
+		if (driver.isEmpty())
+			return false;
 		Driver guy= driver.get(0);
 		try {
 			System.out.println(guy.destination);

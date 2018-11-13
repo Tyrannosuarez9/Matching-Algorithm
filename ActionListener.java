@@ -18,7 +18,7 @@ public class ActionListener {
 		System.out.println(highestidchecked);//debugging
 		
 		try {
-			Thread.sleep(4000);//put the main thread to sleep for a quantity of time 
+			Thread.sleep(40000);//put the main thread to sleep for a quantity of time 
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}

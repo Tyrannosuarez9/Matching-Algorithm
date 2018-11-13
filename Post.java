@@ -1,12 +1,19 @@
 
 abstract public class Post {
 	String date;
+	String destination;
 
 	public String getDate() {
 		return date;
 	}
-
 	public void setDate(String date) {
-		date = date;
+		this.date = date;
 	}
+	public String getDestination() {
+		return destination;
+	}
+	public void setDestination(String destination) {
+		this.destination = destination;
+	}
+
 }
